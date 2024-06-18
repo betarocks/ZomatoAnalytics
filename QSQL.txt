@@ -1,4 +1,4 @@
-
+Sahil Ghag
 Certainly! Here are 25 SQL questions based on the provided student data, along with their answers:
 
 Question: Retrieve all columns for all students.
