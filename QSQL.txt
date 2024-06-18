@@ -1,0 +1,138 @@
+
+Certainly! Here are 25 SQL questions based on the provided student data, along with their answers:
+
+Question: Retrieve all columns for all students.
+Answer: SELECT * FROM Students;
+Question: Retrieve only the first and last names of students.
+Answer: SELECT FirstName, LastName FROM Students;
+Question: Find the average grade of all students.
+Answer: SELECT AVG(Grade) AS AverageGrade FROM Students;
+Question: Retrieve students with a grade above 90.
+Answer: SELECT * FROM Students WHERE Grade > 90;
+Question: Count the number of students.
+Answer: SELECT COUNT(*) AS StudentCount FROM Students;
+Question: Retrieve students from a specific city, e.g., "New York".
+Answer: SELECT * FROM Students WHERE City = 'New York';
+Question: Retrieve students aged 17 or older.
+Answer: SELECT * FROM Students WHERE Age >= 17;
+Question: Find the maximum grade among all students.
+Answer: SELECT MAX(Grade) AS MaxGrade FROM Students;
+Question: Retrieve students whose first name starts with 'J'.
+Answer: SELECT * FROM Students WHERE FirstName LIKE 'J%';
+Question: Retrieve students ordered by their grades in descending order.
+Answer: SELECT * FROM Students ORDER BY Grade DESC;
+Question: Calculate the average age of students.
+Answer: SELECT AVG(Age) AS AverageAge FROM Students;
+Question: Retrieve students with grades between 80 and 90.
+Answer: SELECT * FROM Students WHERE Grade BETWEEN 80 AND 90;
+Question: Find the minimum age among all students.
+Answer: SELECT MIN(Age) AS MinAge FROM Students;
+Question: Retrieve students whose last name ends with 'son'.
+Answer: SELECT * FROM Students WHERE LastName LIKE '%son';
+Question: Calculate the total number of marks for all students.
+Answer: SELECT SUM(Marks) AS TotalMarks FROM Students;
+Question: Retrieve students with a grade above the average grade.
+Answer:
+sql
+Copy code
+SELECT * FROM Students 
+WHERE Grade > (SELECT AVG(Grade) FROM Students);
+Question: Count the number of distinct cities where students live.
+Answer: SELECT COUNT(DISTINCT City) AS DistinctCities FROM Students;
+Question: Retrieve students whose age is odd.
+Answer: SELECT * FROM Students WHERE Age % 2 = 1;
+Question: Find the student with the highest grade.
+Answer: SELECT * FROM Students WHERE Grade = (SELECT MAX(Grade) FROM Students);
+Question: Retrieve students whose first name is 'Olivia' or last name is 'Brown'.
+Answer: SELECT * FROM Students WHERE FirstName = 'Olivia' OR LastName = 'Brown';
+Question: Calculate the average of grades for students aged 16.
+Answer:
+sql
+Copy code
+SELECT AVG(Grade) AS AverageGrade 
+FROM Students 
+WHERE Age = 16;
+Question: Retrieve students with the lowest 5 grades.
+Answer:
+sql
+Copy code
+SELECT * FROM Students 
+ORDER BY Grade 
+LIMIT 5;
+Question: Find the student with the highest marks.
+Answer: SELECT * FROM Students WHERE Marks = (SELECT MAX(Marks) FROM Students);
+Question: Retrieve students living in cities starting with 'S'.
+Answer: SELECT * FROM Students WHERE City LIKE 'S%';
+Question: Calculate the total number of students aged 18.
+Answer: SELECT COUNT(*) AS EighteenYearOlds FROM Students WHERE Age = 18;
+
+
+
+
+
+Now, let's proceed with 25 SQL questions and their answers based on this employee data:
+
+Question: Retrieve all columns for all employees.
+Answer: SELECT * FROM Employees;
+Question: Retrieve only the first and last names of employees.
+Answer: SELECT FirstName, LastName FROM Employees;
+Question: Find the average age of all employees.
+Answer: SELECT AVG(Age) AS AverageAge FROM Employees;
+Question: Retrieve employees with a salary above 55000.
+Answer: SELECT * FROM Employees WHERE Salary > 55000;
+Question: Count the number of employees.
+Answer: SELECT COUNT(*) AS EmployeeCount FROM Employees;
+Question: Retrieve employees from the IT department.
+Answer: SELECT * FROM Employees WHERE Department = 'IT';
+Question: Retrieve employees aged 30 or older.
+Answer: SELECT * FROM Employees WHERE Age >= 30;
+Question: Find the maximum salary among all employees.
+Answer: SELECT MAX(Salary) AS MaxSalary FROM Employees;
+Question: Retrieve employees whose first name starts with 'J'.
+Answer: SELECT * FROM Employees WHERE FirstName LIKE 'J%';
+Question: Retrieve employees ordered by their salaries in descending order.
+Answer: SELECT * FROM Employees ORDER BY Salary DESC;
+Question: Calculate the average salary of employees.
+Answer: SELECT AVG(Salary) AS AverageSalary FROM Employees;
+Question: Retrieve employees with salaries between 50000 and 60000.
+Answer: SELECT * FROM Employees WHERE Salary BETWEEN 50000 AND 60000;
+Question: Find the minimum age among all employees.
+Answer: SELECT MIN(Age) AS MinAge FROM Employees;
+Question: Retrieve employees whose last name ends with 'son'.
+Answer: SELECT * FROM Employees WHERE LastName LIKE '%son';
+Question: Calculate the total salary expense for all employees.
+Answer: SELECT SUM(Salary) AS TotalSalaryExpense FROM Employees;
+Question: Retrieve employees with a salary above the average salary.
+Answer:
+sql
+Copy code
+SELECT * FROM Employees 
+WHERE Salary > (SELECT AVG(Salary) FROM Employees);
+Question: Count the number of distinct departments where employees work.
+Answer: SELECT COUNT(DISTINCT Department) AS DistinctDepartments FROM Employees;
+Question: Retrieve employees whose age is even.
+Answer: SELECT * FROM Employees WHERE Age % 2 = 0;
+Question: Find the employee with the highest salary.
+Answer: SELECT * FROM Employees WHERE Salary = (SELECT MAX(Salary) FROM Employees);
+Question: Retrieve employees whose first name is 'Jane' or last name is 'Brown'.
+Answer: SELECT * FROM Employees WHERE FirstName = 'Jane' OR LastName = 'Brown';
+Question: Calculate the average salary for employees in the Finance department.
+Answer:
+sql
+Copy code
+SELECT AVG(Salary) AS AverageSalary 
+FROM Employees 
+WHERE Department = 'Finance';
+Question: Retrieve employees with the lowest 3 salaries.
+Answer:
+sql
+Copy code
+SELECT * FROM Employees 
+ORDER BY Salary 
+LIMIT 3;
+Question: Find the employee with the highest age.
+Answer: SELECT * FROM Employees WHERE Age = (SELECT MAX(Age) FROM Employees);
+Question: Retrieve employees living in departments starting with 'M'.
+Answer: SELECT * FROM Employees WHERE Department LIKE 'M%';
+Question: Calculate the total number of employees aged 35.
+Answer: SELECT COUNT(*) AS ThirtyFiveYearOlds FROM Employees WHERE Age = 35;
